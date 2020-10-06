@@ -2,10 +2,47 @@ import styled from 'styled-components'
 import { FaDropbox } from 'react-icons/fa'
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
-`;
+  @media (min-width: 1024px) {
+    max-width: 480px;
+  }
+`
 
-export const Navigation = styled.div``
+export const Navigation = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  min-height: 61px;
+
+  > h1 {
+    display: flex;
+    align-items: center;
+
+    > span {
+      color: var(--color-quaternary);
+      margin-left: 10px;
+    }
+  }
+
+  > button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+  }
+
+  @media (min-width: 1024px) {
+    > h1 {
+      display: none;
+    }
+  }
+`
 
 export const DropboxLogo = styled(FaDropbox)`
   width: 36px;
@@ -13,4 +50,53 @@ export const DropboxLogo = styled(FaDropbox)`
   fill: var(--color-blue);
 `
 
-export const Form = styled.div``
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 0 32px;
+  max-width: 480px;
+  margin: 0 auto;
+
+  > .title {
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  > .subtitle {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
+  > input {
+    background: var(--color-tertiary);
+    border: 1px solid var(--color-border);
+    padding: 13px 18px;
+    font-size: 14px;
+    margin-top: 18px;
+    outline: none;
+  }
+
+  > button {
+    margin-top: 18px;
+    padding: 13px 18px;
+    font-size: 16px;
+    background: var(--color-blue);
+    color: var(--color-tertiary);
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    :hover {
+      opacity: 0.7;
+    }
+  }
+
+  > .terms {
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 4px;
+  }
+`

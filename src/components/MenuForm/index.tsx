@@ -29,7 +29,7 @@ const MenuForm: React.FC = () => {
         <input type="password" placeholder="Senha" />
 
         <button>Prosseguir</button>
-        <span className="termns">
+        <span className="terms">
           Esta página está sujeita à Política de Privacidade e aos Termos de Serviço.
         </span>
       </Form>
